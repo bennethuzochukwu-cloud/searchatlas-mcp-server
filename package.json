@@ -1,21 +1,64 @@
 {
   "name": "searchatlas-mcp-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "MCP server for SearchAtlas AI Agent — SEO, content, PPC, and site management tools. Exposes 16 tools for keyword research, site auditing, content optimization, backlink analysis, OTTO SEO automation, rank tracking, Google Business Profile management, and LLM brand visibility monitoring.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "searchatlas-mcp-server": "dist/index.js"
   },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "searchatlas",
+    "seo",
+    "ai-agent",
+    "content",
+    "ppc",
+    "site-explorer",
+    "authority-building",
+    "keyword-research",
+    "backlinks",
+    "google-business-profile",
+    "llm-visibility",
+    "otto-seo",
+    "rank-tracking",
+    "claude",
+    "cursor",
+    "ai-tools",
+    "marketing"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bennethuzochukwu-cloud/searchatlas-mcp-server.git"
+    "url": "https://github.com/bennethuzochukwu-cloud/searchatlas-mcp-server.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "homepage": "https://searchatlas.com",
   "bugs": {
     "url": "https://github.com/bennethuzochukwu-cloud/searchatlas-mcp-server/issues"
   },
-  "homepage": "https://github.com/bennethuzochukwu-cloud/searchatlas-mcp-server#readme"
+  "author": "SearchAtlas <support@searchatlas.com> (https://searchatlas.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "server.json"
+  ]
 }
